@@ -316,7 +316,6 @@
   padding-top: var(--content-gap-mobile);
   display: grid;
   gap: var(--content-gap-desktop);
-  background-color: var(--main-bg-color);
   margin-bottom: 47px;
 }
 

@@ -37,10 +37,6 @@
   }
 }
 
-.footer {
-  position: relative;
-}
-
 .corner {
   position: absolute;
   width: 25px;
@@ -85,7 +81,7 @@
   display: none;
 }
 
-@media (width >=1024px) {
+@media (min-width: 1024px) {
   .header__theme-menu {
     justify-self: center;
     align-self: self-start;
@@ -98,7 +94,7 @@
   background-attachment: fixed;
   padding: 10px;
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .page {
     padding: 20px;
   }
@@ -113,14 +109,14 @@
   justify-items: end;
   grid-template-rows: 1fr min-content 1fr;
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .header {
     min-block-size: 985px;
     display: grid;
     grid-template-rows: 1fr max-content 1fr;
   }
 }
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .header {
     grid-template-columns: 1fr;
     min-block-size: 730px;
@@ -144,14 +140,14 @@
   color: var(--header-logo-color);
   text-shadow: 4px 4px var(--accent-color); /* тень для текста */
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .header__title {
     grid-row: 2;
     margin-left: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .header__title {
     grid-column: 1;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -173,7 +169,7 @@
   line-height: 23.4px;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .text-block__header {
     width: 50%;
     justify-self: end;
@@ -189,7 +185,7 @@
   gap: 15px;
 }
 
-@media (width >=1024px) {
+@media (min-width: 1024px) {
   .header__theme-menu-list {
     display: flex;
     justify-content: center;
@@ -244,7 +240,7 @@
   line-height: 23.4px;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .content-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -252,7 +248,7 @@
   }
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .content-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -272,13 +268,13 @@
   }
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .text-blocks {
     justify-items: end;
   }
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .text-blocks {
     grid-column: span 2;
   }
@@ -324,7 +320,7 @@
   margin-bottom: 47px;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .content {
     padding-top: 80px;
     gap: 60px;
@@ -332,7 +328,7 @@
   }
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .content {
     padding-top: 78px;
     gap: 60px;
@@ -344,13 +340,13 @@
   max-width: 355px;
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .causes .content-section__title {
     max-width: 236px;
   }
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .causes .content-section__title {
     max-width: 315px;
   }
@@ -360,7 +356,7 @@
   grid-column: 1/ -1;
 }
 
-@media (width >= 1024px) {
+@media (min-width: 1024px) {
   .causes .text-blocks {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -375,7 +371,7 @@
   display: grid;
   gap: 10px;
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .gallery {
     gap: 17px;
   }
@@ -387,7 +383,7 @@
   display: block;
   object-fit: cover;
 }
-@media (width >= 768px) {
+@media (min-width: 768px) {
   /* Ширина экрана, при которой меняется отображение */
   .gallery__list {
     grid-template-columns: repeat(3, 1fr);
@@ -420,6 +416,7 @@
 }
 
 .footer {
+  position: relative;
   min-block-size: 650px;
   display: flex;
   justify-content: center;
@@ -437,22 +434,22 @@
   align-self: center;
 }
 
-@media (width >=768px) {
+@media (min-width: 768px) {
   .footer__text {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
-@media (width < 768px) {
+@media (max-width: 768px) {
   .footer__text {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
 
-@media (width >=768px) {
+@media (min-width: 768px) {
   .footer {
     min-block-size: 983px;
   }
-  @media (width >=1024px) {
+  @media (min-width: 1024px) {
     .footer {
       min-block-size: 727px;
     }

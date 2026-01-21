@@ -383,7 +383,7 @@
   display: block;
   object-fit: cover;
 }
-@media (min-width: 768px) {
+@media (min-width: 375px) {
   /* Ширина экрана, при которой меняется отображение */
   .gallery__list {
     grid-template-columns: repeat(3, 1fr);

@@ -37,7 +37,8 @@
     --header-logo-color: #ffc2e6;
     --footer-logo-color: #ffc2e6;
   }
-}
-.rec {
-  display: none;
+
+  .rec {
+    display: none;
+  }
 }

@@ -335,7 +335,7 @@
   display: grid;
   gap: var(--content-gap-desktop);
   background-color: var(--main-bg-color);
-  margin-bottom: 48px;
+  margin-bottom: 28px;
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -441,7 +441,7 @@
 .footer {
   margin: 10px;
   position: relative;
-  min-height: 648px;
+  min-height: 688px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -471,12 +471,12 @@
 
 @media (min-width: 768px) {
   .footer {
-    min-block-size: 983px;
+    min-block-size: 768px;
     margin: 0;
   }
   @media (min-width: 1024px) {
     .footer {
-      max-block-size: 729px;
+      min-block-size: 1024px;
     }
   }
 }

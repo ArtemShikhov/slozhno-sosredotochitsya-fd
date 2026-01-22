@@ -114,9 +114,10 @@
 }
 
 .header {
+  width: 100%;
   padding: 10px;
-  /* min-height: 668px;
-  height: 100vh; */
+  min-height: 668px;
+  height: 100vh;
   position: relative;
   display: grid;
   align-items: center;
@@ -441,7 +442,7 @@
 .footer {
   margin: 10px;
   position: relative;
-  /* min-height: 629px; */
+  min-height: 629px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -478,15 +479,5 @@
     .footer {
       max-block-size: 729px;
     }
-  }
-}
-@supports (block-size: 100dvb) {
-  .header {
-    block-size: 100dvb;
-  }
-}
-@supports (block-size: 100dvb) {
-  .footer {
-    block-size: 100dvb;
   }
 }

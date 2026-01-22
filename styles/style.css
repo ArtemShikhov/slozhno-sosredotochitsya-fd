@@ -124,12 +124,6 @@
   }
 }
 
-@supports (block-size: 100dvb) {
-  .header {
-    block-size: 100dvb;
-  }
-}
-
 .header__title {
   grid-column: 1;
   justify-self: start;
@@ -162,7 +156,7 @@
 
 .text-block__header {
   background-color: var(--accent-color);
-  color: var(--main-bg-color);
+  color: var(--main-heading-color);
   font-weight: 700;
   font-size: 18px;
   grid-column: 1/ -1;
@@ -281,7 +275,7 @@
 }
 
 .content-section__title {
-  color: var(--accent-color);
+  color: var(--nav-color);
   margin-bottom: 20px;
   font-family: IBM Plex Mono;
   font-weight: 700;
@@ -291,7 +285,7 @@
 
 .text-block__title {
   background-color: var(--accent-color);
-  color: var(--main-bg-color);
+  color: var(--main-heading-color);
   font-weight: 700;
   font-size: 18px;
 }
@@ -304,7 +298,7 @@
 
 .text-block__subtitle {
   background-color: var(--accent-color);
-  color: var(--main-bg-color);
+  color: var(--main-heading-color);
   font-weight: 400;
   font-size: 18px;
   font-family: IBM Plex Mono;
@@ -317,7 +311,7 @@
   display: grid;
   gap: var(--content-gap-desktop);
   background-color: var(--main-bg-color);
-  margin-bottom: 47px;
+  margin-bottom: var(--content-gap-mobile);
 }
 
 @media (min-width: 768px) {
@@ -383,7 +377,8 @@
   display: block;
   object-fit: cover;
 }
-@media (min-width: 375px) {
+
+@media (min-width: 768px) {
   /* Ширина экрана, при которой меняется отображение */
   .gallery__list {
     grid-template-columns: repeat(3, 1fr);
@@ -417,7 +412,7 @@
 
 .footer {
   position: relative;
-  min-block-size: 650px;
+  min-block-size: 648px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,10 +448,5 @@
     .footer {
       min-block-size: 727px;
     }
-  }
-}
-@supports (block-size: 100dvb) {
-  .footer {
-    block-size: 100dvb;
   }
 }

@@ -1,7 +1,11 @@
 .rec {
+<<<<<<< HEAD
   font-family:
     IBM Plex Mono,
     sans-serif;
+=======
+  font-family: IBM Plex Mono, sans-serif;
+>>>>>>> 5e471a365cfe651a72bac72d25b2e4c243aeb779
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -38,7 +42,10 @@
   border-top: 1px solid var(--nav-color);
   border-right: 1px solid var(--nav-color);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e471a365cfe651a72bac72d25b2e4c243aeb779
 .header::after {
   content: "";
   position: absolute;
@@ -94,6 +101,11 @@
     justify-items: normal;
   }
 }
+@supports (block-size: 100dvb) {
+  .header {
+    block-size: 100dvb;
+  }
+}
 
 @supports (block-size: 100dvb) {
   .header {
@@ -110,13 +122,19 @@
   color: var(--header-logo-color);
   text-shadow: 4px 4px var(--accent-color); /* тень для текста */
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e471a365cfe651a72bac72d25b2e4c243aeb779
 @media (max-width: 767px) {
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e471a365cfe651a72bac72d25b2e4c243aeb779
 @media (min-width: 768px) {
   .header__title {
     grid-row: 2;
@@ -213,9 +231,13 @@
 }
 
 .content-section {
+<<<<<<< HEAD
   font-family:
     IBM Plex Mono,
     sans-serif;
+=======
+  font-family: IBM Plex Mono, sans-serif;
+>>>>>>> 5e471a365cfe651a72bac72d25b2e4c243aeb779
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -258,6 +280,12 @@
   .text-blocks {
     grid-column: span 2;
   }
+}
+.text-block {
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  color: var(--main-heading-color);
+  font-weight: 700;
 }
 
 .text-block {
@@ -444,7 +472,10 @@
   border-bottom: 1px solid var(--nav-color);
   border-left: 1px solid var(--nav-color);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5e471a365cfe651a72bac72d25b2e4c243aeb779
 @supports (block-size: 100dvb) {
   .footer {
     block-size: 100dvb;

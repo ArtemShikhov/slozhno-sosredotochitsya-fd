@@ -1,5 +1,5 @@
 .rec {
-  font-family: IBM Plex Mono;
+  font-family: IBM Plex Mono, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -11,12 +11,7 @@
   top: 0px;
   right: 30px;
 }
-@media (width >=768px) {
-  .rec {
-    top: 0;
-    right: 30px;
-  }
-}
+
 .rec::after {
   content: "";
   display: block;
@@ -31,27 +26,7 @@
   top: 7px;
 }
 
-.corner {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-}
-
-.corner--top-right {
-  top: 0;
-  right: 0;
-  border-top: 2px solid var(--nav-color);
-  border-right: 2px solid var(--nav-color);
-}
-
-.corner--bottom-left {
-  bottom: 0;
-  left: 0;
-  border-bottom: 2px solid var(--nav-color);
-  border-left: 2px solid var(--nav-color);
-}
-
-.header.decorated-zone::before {
+.header::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -61,28 +36,15 @@
   border-top: 1px solid var(--nav-color);
   border-right: 1px solid var(--nav-color);
 }
-.header.decorated-zone::after {
+.header::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 40px;
   left: 0px;
   inline-size: 25px;
   block-size: 25px;
   border-bottom: 1px solid var(--nav-color);
   border-left: 1px solid var(--nav-color);
-}
-@media (width >= 768px) {
-  .header.decorated-zone::before {
-    top: 0;
-    right: 0;
-  }
-  .header.decorated-zone::after {
-    bottom: 0;
-    left: 0;
-  }
-}
-.header .corner {
-  display: none;
 }
 
 .header__theme-menu {
@@ -101,30 +63,20 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
-  display: grid;
-  gap: 10px;
-}
-@media (min-width: 768px) {
-  .page {
-    gap: 0;
-  }
 }
 
 .header {
+  padding-bottom: 40px;
   margin: 10px;
-  min-height: 100vh;
   position: relative;
   display: grid;
   align-items: center;
   justify-items: end;
   grid-template-rows: 1fr auto 1fr;
-  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .header {
     margin: 20px;
-    min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr max-content 1fr;
     margin-bottom: 0;
@@ -133,8 +85,12 @@
 @media (min-width: 1024px) {
   .header {
     grid-template-columns: 1fr;
-    min-height: 100vh;
     justify-items: normal;
+  }
+}
+@supports (block-size: 100dvb) {
+  .header {
+    block-size: 100dvb;
   }
 }
 
@@ -147,6 +103,11 @@
   color: var(--header-logo-color);
   text-shadow: 4px 4px var(--accent-color); /* тень для текста */
 }
+@media (max-width: 767px) {
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
 @media (min-width: 768px) {
   .header__title {
     grid-row: 2;
@@ -157,13 +118,6 @@
 @media (min-width: 1024px) {
   .header__title {
     grid-column: 1;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-}
-
-@media (max-width: 767px) {
-  .header__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
 
@@ -181,7 +135,6 @@
     width: 50%;
     justify-self: end;
     align-self: center;
-    margin-bottom: 40px;
   }
 }
 @media (min-width: 1024px) {
@@ -200,11 +153,9 @@
 
 @media (min-width: 1024px) {
   .header__theme-menu-list {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
-    gap: 10px;
   }
 }
 .header__theme-menu-button {
@@ -222,14 +173,13 @@
   border: 1px solid var(--section-heading-color);
 }
 .header__theme-menu-button:hover {
-  opacity: 0.6;
   border: 1px solid var(--nav-hover-color);
 }
 .header__theme-menu-button:focus {
   outline: none;
 }
 .header__theme-menu-button:focus-visible {
-  outline: 2px solid var(--nav-color);
+  outline: 1px solid var(--nav-color);
   outline-offset: 2px;
 }
 .text {
@@ -242,12 +192,12 @@
 }
 
 .text:focus {
-  outline: 2px solid var(--main-text-color);
+  outline: 1px solid var(--main-text-color);
   outline-offset: 2px;
 }
 
 .content-section {
-  font-family: IBM Plex Mono;
+  font-family: IBM Plex Mono, sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -264,9 +214,7 @@
 
 @media (min-width: 1024px) {
   .content-section {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
   }
 }
 
@@ -293,20 +241,22 @@
     grid-column: span 2;
   }
 }
+.text-block {
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  color: var(--main-heading-color);
+  font-weight: 700;
+}
 
 .content-section__title {
   color: var(--nav-color);
   margin-bottom: 20px;
-  font-family: IBM Plex Mono;
-  font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
 }
 
 .text-block__title {
   background-color: var(--accent-color);
-  color: var(--main-heading-color);
-  font-weight: 700;
   font-size: 18px;
 }
 
@@ -318,10 +268,7 @@
 
 .text-block__subtitle {
   background-color: var(--accent-color);
-  color: var(--main-heading-color);
   font-weight: 400;
-  font-size: 18px;
-  font-family: IBM Plex Mono;
   line-height: 23px;
   margin-top: 20px;
 }
@@ -329,7 +276,7 @@
 .content {
   display: grid;
   gap: var(--content-gap-desktop);
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -341,13 +288,6 @@
     margin-bottom: 60px;
     margin-right: 20px;
     margin-left: 20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .content {
-    padding-top: 40px;
-    gap: 60px;
   }
 }
 
@@ -435,7 +375,6 @@
 .footer {
   margin: 10px;
   position: relative;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -445,10 +384,7 @@
 }
 
 .footer__text {
-  font-family: IBM Plex Mono;
-  font-weight: 700;
-  justify-self: center;
-  align-self: center;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
 @media (min-width: 768px) {
@@ -456,15 +392,36 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
-@media (max-width: 768px) {
-  .footer__text {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-}
 
 @media (min-width: 768px) {
   .footer {
-    min-height: 100vh;
     margin: 20px;
+  }
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  right: 0px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--nav-color);
+  border-right: 1px solid var(--nav-color);
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+  inline-size: 25px;
+  block-size: 25px;
+  border-bottom: 1px solid var(--nav-color);
+  border-left: 1px solid var(--nav-color);
+}
+@supports (block-size: 100dvb) {
+  .footer {
+    block-size: 100dvb;
   }
 }

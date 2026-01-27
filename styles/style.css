@@ -39,7 +39,7 @@
 .header::after {
   content: "";
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   left: 0px;
   inline-size: 25px;
   block-size: 25px;
@@ -67,8 +67,8 @@
 }
 
 .header {
-  padding-bottom: 40px;
-  margin: 10px;
+  padding-bottom: 20px;
+  margin: 10px 10px 20px;
   position: relative;
   display: grid;
   align-items: center;
@@ -82,6 +82,7 @@
     display: grid;
     grid-template-rows: 1fr max-content 1fr;
     margin-bottom: 0;
+    padding-bottom: 40px;
   }
 }
 
@@ -233,12 +234,6 @@
   }
 }
 
-.text-blocks {
-  display: grid;
-  column-gap: 20px;
-  justify-items: center;
-}
-
 @media (max-width: 768px) {
   .text-blocks {
     justify-items: center;
@@ -256,16 +251,10 @@
     grid-column: span 2;
   }
 }
-.text-block {
-  font-family:
-    IBM Plex Mono,
-    sans-serif;
-  font-size: 18px;
-  color: var(--main-heading-color);
-  font-weight: 700;
-}
-
-.text-block {
+.text-blocks {
+  display: grid;
+  column-gap: 20px;
+  justify-items: center;
   font-family:
     IBM Plex Mono,
     sans-serif;

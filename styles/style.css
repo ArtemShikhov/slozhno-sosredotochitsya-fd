@@ -429,7 +429,7 @@
 .footer::after {
   content: "";
   position: absolute;
-  bottom: 15px;
+  bottom: 14px;
   left: 0px;
   inline-size: 25px;
   block-size: 25px;

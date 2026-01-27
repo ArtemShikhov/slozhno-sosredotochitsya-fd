@@ -276,6 +276,7 @@
 }
 
 .text-block__content {
+  font-weight: 400;
   margin-top: 10px;
   margin-bottom: 20px;
   color: var(--main-text-color);
@@ -429,7 +430,7 @@
 .footer::after {
   content: "";
   position: absolute;
-  bottom: 14px;
+  bottom: 10px;
   left: 0px;
   inline-size: 25px;
   block-size: 25px;

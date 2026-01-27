@@ -91,11 +91,6 @@
     justify-items: normal;
   }
 }
-@supports (block-size: 100dvb) {
-  .header {
-    block-size: 100dvb;
-  }
-}
 
 @supports (block-size: 100dvb) {
   .header {
@@ -354,12 +349,10 @@
   grid-template-columns: 1fr;
   gap: 10px;
 }
-
 .gallery {
   display: grid;
   gap: 10px;
 }
-
 @media (min-width: 768px) {
   .gallery {
     gap: 17px;

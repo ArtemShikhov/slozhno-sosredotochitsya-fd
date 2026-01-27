@@ -68,7 +68,7 @@
 
 .header {
   padding-bottom: 20px;
-  margin: 10px 10px 20px;
+  margin: 10px 10px 25px;
   position: relative;
   display: grid;
   align-items: center;
@@ -291,7 +291,7 @@
 .content {
   display: grid;
   gap: var(--content-gap-desktop);
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -429,7 +429,7 @@
 .footer::after {
   content: "";
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 0px;
   inline-size: 25px;
   block-size: 25px;

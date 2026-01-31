@@ -98,7 +98,7 @@
 
 .header {
   height: 100vh;
-  max-height: 668px;
+  min-height: 668px;
   padding: 10px;
   display: grid;
   align-items: center;
@@ -287,7 +287,6 @@
   color: var(--main-text-color);
 }
 .text-block__subtitle {
-  background-color: var(--accent-color);
   font-weight: 400;
 }
 
@@ -394,7 +393,7 @@
 
 .footer {
   height: 100vh;
-  max-height: 668px;
+  min-height: 668px;
   padding: 0 10px;
   display: flex;
   justify-content: center;
